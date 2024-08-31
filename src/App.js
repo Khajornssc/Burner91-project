@@ -1,15 +1,19 @@
 import React, { useState, useRef, useEffect } from "react";
 import {
-  Cpu,
-  Wifi,
-  Bell,
-  Server,
-  GitBranch,
-  Shield,
-  MessageSquare,
-  Zap,
-  Clock,
+  Cpu, 
+  Wifi, 
+  Bell, 
+  Server, 
+  GitBranch, 
+  Shield, 
+  MessageSquare, 
+  Zap, 
+  Clock, 
   Link,
+  Workflow,
+  Settings,
+  Play,
+  Check
 } from "lucide-react";
 import "./App.css";
 
@@ -74,6 +78,26 @@ const slides = [
     backgroundImage:
       "https://images.pexels.com/photos/18509543/pexels-photo-18509543.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
   },
+  {
+    title: "Microsoft Teams Workflows",
+    content: [
+      { icon: Workflow, text: "ระบบอัตโนมัติสำหรับกระบวนการทำงาน" },
+      { icon: Settings, text: "ปรับแต่งได้ตามความต้องการของแต่ละองค์กร" },
+      { icon: Play, text: "ทริกเกอร์โดยเหตุการณ์หรือตามกำหนดเวลา" },
+      { icon: Check, text: "ลดงานที่ทำซ้ำๆ และเพิ่มประสิทธิภาพ" }
+    ],
+    backgroundImage: "https://images.unsplash.com/photo-1572177215152-32f247303126?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    title: "Burner91 กับ Teams Workflows",
+    content: [
+      { icon: Bell, text: "สร้าง Workflow รับการแจ้งเตือนจาก Burner91" },
+      { icon: MessageSquare, text: "ส่งข้อความแจ้งเตือนไปยังช่องทางที่เหมาะสม" },
+      { icon: Zap, text: "ทริกเกอร์การดำเนินการอัตโนมัติเมื่อตรวจพบปัญหา" },
+      { icon: Link, text: "เชื่อมโยงกับระบบอื่นๆ เช่น การสร้างงานซ่อมบำรุง" }
+    ],
+    backgroundImage: "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  }
 ];
 
 const Slide = ({ slide, isActive }) => (
